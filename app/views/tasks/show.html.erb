@@ -1,3 +1,17 @@
-<h2><%= @task.title %></h2>
-<p><%= @task.details %></p>
-<p><%= @task.completed %></p>
+<div class = "container">
+  <h1><%= @task.title %></h1>
+  <div class="card" style="width: 18rem;">
+    <%# <ul class="list-group list-group-flush"> %>
+      <p class="card-header">Description: <%= @task.details %></p>
+      <li class="list-group-item">Completed: <%= @completed %></li>
+    <%# </ul> %>
+  </div>
+
+  <div class = "btn btn-light">
+    <%=  link_to 'Edit task' , edit_task_path(@task)%>
+  </div>
+
+  <div class = "btn btn-light">
+    <%=  link_to 'Home' , tasks_path(@task)%>
+  </div>
+</div>
